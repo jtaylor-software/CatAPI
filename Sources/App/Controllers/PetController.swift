@@ -35,7 +35,7 @@ struct PetController: RouteCollection {
 						.unwrap(or: Abort(.notFound))
 						.flatMap {
 								$0.favoriteToy = pet.favoriteToy
-								$0.imageString = pet.imageString
+								$0.imageData = pet.imageData
 								$0.trait = pet.trait
 								return $0.update(on: req.db).transform(to: .ok)
 						}
