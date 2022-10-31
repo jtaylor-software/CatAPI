@@ -13,7 +13,7 @@ struct CreatePets: Migration {
 						.id()
 						.field("name", .string, .required)
 						.field("favoriteToy", .string)
-						.field("imageData", .data)
+						.field("imageString", .string)
 						.field("age", .int, .required)
 						.field("birthday", .string, .required)
 						.field("trait", .string, .required)
