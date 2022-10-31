@@ -19,8 +19,7 @@ final class Pet: Model, Content {
 		
 		@Field(key: "favoriteToy")
 		var favoriteToy: String?
-		@Field(key: "imageString")
-		var imageString: String?
+    
 		@Field(key: "age")
 		var age: Int
 		@Field(key: "birthday")
@@ -30,11 +29,10 @@ final class Pet: Model, Content {
 		
 		init() { }
 		
-		init(id: UUID? = nil, name: String, favoriteToy: String? = nil, imageString: String? = nil, age: Int, birthday: String, trait: String) {
+		init(id: UUID? = nil, name: String, favoriteToy: String? = nil, age: Int, birthday: String, trait: String) {
 				self.id = id
 				self.name = name
 				self.favoriteToy = favoriteToy
-				self.imageString = imageString
 				self.age = age
 				self.birthday = birthday
 				self.trait = trait
