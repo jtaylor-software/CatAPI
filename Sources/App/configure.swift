@@ -23,6 +23,7 @@ public func configure(_ app: Application) throws {
 		}
 		
 		app.migrations.add(CreatePets())
+        app.migrations.add(CreateFacts())
 		if app.environment == .development {
 				try app.autoMigrate().wait()
 		}
